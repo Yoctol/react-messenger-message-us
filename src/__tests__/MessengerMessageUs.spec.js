@@ -23,7 +23,7 @@ describe('<MessengerMessageUs />', () => {
     ).toBe('<PAGE_ID>');
   });
 
-  it('render color as ref to DOM element', () => {
+  it('render color to DOM element', () => {
     const wrapper = mount(
       <MessengerMessageUs pageId="<PAGE_ID>" appId="<APP_ID>" color="white" />
     );
