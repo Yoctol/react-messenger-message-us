@@ -8,6 +8,8 @@
 
 ## Screenshot
 
+![](https://user-images.githubusercontent.com/3382565/37636056-82b65fda-2c3a-11e8-92e4-df0121a0044f.png)
+
 ## Prerequisite
 
 Whitelist your domain to connect your Facebook Page to your website via the
@@ -31,11 +33,7 @@ import ReactDOM from 'react-dom';
 import MessengerMessageUs from 'react-messenger-message-us';
 
 ReactDOM.render(
-  <MessengerMessageUs
-    pageId="<PAGE_ID>"
-    appId="<APP_ID>"
-    htmlRef="<REF_STRING>"
-  />,
+  <MessengerMessageUs pageId="<PAGE_ID>" appId="<APP_ID>" />,
   document.getElementById('demo')
 );
 ```
@@ -50,11 +48,8 @@ static propTypes = {
   pageId: PropTypes.string.isRequired,
   appId: PropTypes.string.isRequired,
 
-  htmlRef: PropTypes.string,
-  minimized: PropTypes.bool,
-  themeColor: PropTypes.string,
-  loggedInGreeting: PropTypes.string,
-  loggedOutGreeting: PropTypes.string,
+  color: PropTypes.string,
+  size: PropTypes.string,
   autoLogAppEvents: PropTypes.bool,
   xfbml: PropTypes.bool,
   version: PropTypes.string,
@@ -63,11 +58,8 @@ static propTypes = {
 };
 
 static defaultProps = {
-  htmlRef: undefined,
-  minimized: undefined,
-  themeColor: undefined,
-  loggedInGreeting: undefined,
-  loggedOutGreeting: undefined,
+  color: 'blue',
+  size: 'large',
   autoLogAppEvents: true,
   xfbml: true,
   version: '2.11',
@@ -78,6 +70,7 @@ static defaultProps = {
 
 ## Related
 
+* [react-messenger-customer-chat](https://github.com/Yoctol/react-messenger-customer-chat) - React component for messenger customer chat plugin.
 * [react-messenger-checkbox](https://github.com/Yoctol/react-messenger-checkbox) - React component for messenger checkbox plugin.
 * [messaging-api-messenger](https://github.com/Yoctol/messaging-apis/tree/master/packages/messaging-api-messenger) - Messaging APIs for Messenger.
 * [bottender](https://github.com/Yoctol/bottender) - Make Bots in Your Way, Fast and Flexibly.
