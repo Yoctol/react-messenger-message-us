@@ -1,6 +1,6 @@
 # React Messenger Message Us
 
-> React component for messenger message us lugin
+> React component for [Messenger message us plugin](https://developers.facebook.com/docs/messenger-platform/discovery/message-us-plugin)
 
 [![npm](https://img.shields.io/npm/v/react-messenger-message-us.svg?style=flat-square)](https://www.npmjs.com/package/react-messenger-message-us)
 [![Build Status](https://travis-ci.org/Yoctol/react-messenger-message-us.svg?branch=master)](https://travis-ci.org/Yoctol/react-messenger-message-us)
