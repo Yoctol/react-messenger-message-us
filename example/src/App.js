@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
 import MessengerMessageUs from 'react-messenger-message-us';
+import React, { Component } from 'react';
 
 import logo from './logo.svg';
 import './App.css';

@@ -1,6 +1,6 @@
-import React from 'react';
-import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import Enzyme, { mount } from 'enzyme';
+import React from 'react';
 
 import MessengerMessageUs from '../MessengerMessageUs';
 
@@ -16,10 +16,7 @@ describe('<MessengerMessageUs />', () => {
       <MessengerMessageUs pageId="<PAGE_ID>" appId="<APP_ID>" />
     );
     expect(
-      wrapper
-        .render()
-        .find('.fb-messengermessageus')
-        .prop('page_id')
+      wrapper.render().find('.fb-messengermessageus').prop('page_id')
     ).toBe('<PAGE_ID>');
   });
 
@@ -27,24 +24,18 @@ describe('<MessengerMessageUs />', () => {
     const wrapper = mount(
       <MessengerMessageUs pageId="<PAGE_ID>" appId="<APP_ID>" color="white" />
     );
-    expect(
-      wrapper
-        .render()
-        .find('.fb-messengermessageus')
-        .prop('color')
-    ).toBe('white');
+    expect(wrapper.render().find('.fb-messengermessageus').prop('color')).toBe(
+      'white'
+    );
   });
 
   it('render size to DOM element', () => {
     const wrapper = mount(
       <MessengerMessageUs pageId="<PAGE_ID>" appId="<APP_ID>" size="xlarge" />
     );
-    expect(
-      wrapper
-        .render()
-        .find('.fb-messengermessageus')
-        .prop('size')
-    ).toBe('xlarge');
+    expect(wrapper.render().find('.fb-messengermessageus').prop('size')).toBe(
+      'xlarge'
+    );
   });
 
   it('define fbAsyncInit and call loadSdkAsynchronously when facebook-jssdk does not exist', () => {

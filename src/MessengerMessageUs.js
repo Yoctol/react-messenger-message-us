@@ -1,30 +1,7 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 
 export default class MessengerMessageUs extends Component {
-  static propTypes = {
-    pageId: PropTypes.string.isRequired,
-    appId: PropTypes.string.isRequired,
-
-    color: PropTypes.string,
-    size: PropTypes.string,
-    autoLogAppEvents: PropTypes.bool,
-    xfbml: PropTypes.bool,
-    version: PropTypes.string,
-    language: PropTypes.string,
-    debug: PropTypes.bool,
-  };
-
-  static defaultProps = {
-    color: 'blue',
-    size: 'large',
-    autoLogAppEvents: true,
-    xfbml: true,
-    version: '2.11',
-    language: 'en_US',
-    debug: false,
-  };
-
   componentDidMount() {
     if (document.getElementById('facebook-jssdk')) {
       return;
@@ -82,3 +59,26 @@ export default class MessengerMessageUs extends Component {
     return <div dangerouslySetInnerHTML={this.createMarkup()} />;
   }
 }
+
+MessengerMessageUs.propTypes = {
+  pageId: PropTypes.string.isRequired,
+  appId: PropTypes.string.isRequired,
+
+  color: PropTypes.string,
+  size: PropTypes.string,
+  autoLogAppEvents: PropTypes.bool,
+  xfbml: PropTypes.bool,
+  version: PropTypes.string,
+  language: PropTypes.string,
+  debug: PropTypes.bool,
+};
+
+MessengerMessageUs.defaultProps = {
+  color: 'blue',
+  size: 'large',
+  autoLogAppEvents: true,
+  xfbml: true,
+  version: '2.11',
+  language: 'en_US',
+  debug: false,
+};
